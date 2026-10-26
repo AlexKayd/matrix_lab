@@ -7,6 +7,7 @@
 """
 from sys import stdin
 
+
 def read_matrix_from_console():
     """
     Построчный ввод матрицы с клавиатуры.
@@ -16,6 +17,7 @@ def read_matrix_from_console():
 
     return: матрица в виде list[list[float]]
     """
+    print("Введите размеры матрицы, затем саму матрицу:\n")
     n, m = map(int, stdin.readline().split())
 
     matrix = []
@@ -26,6 +28,7 @@ def read_matrix_from_console():
         matrix.append(row)
 
     return matrix
+
 
 def read_matrix_from_file(filename):
     """
@@ -52,6 +55,7 @@ def read_matrix_from_file(filename):
 
     return matrix
 
+
 def max_element_lena(matrix):
     """
     Возвращает ширину самого длинного элемента матрицы.
@@ -64,6 +68,7 @@ def max_element_lena(matrix):
                 max_lena = lena
 
     return max_lena
+
 
 def write_matrix_to_file(matrix, filename):
     """
@@ -86,6 +91,7 @@ def write_matrix_to_file(matrix, filename):
         for row in matrix:
             line = " ".join(f"{elem:>{max_lena}}" for elem in row)
             file_out.write(f"{line}\n")
+
 
 def print_matrix(matrix):
     """
